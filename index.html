@@ -68,32 +68,27 @@
     }
     .btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.25)}
 
-/* 🐎 Caballos animados debajo del botón */
-.horse {
-  position: absolute;
-  bottom: -8px;
-  left: -120px;          /* arranca fuera de la vista */
-  font-size: 50px;
-  transform: scaleX(-1); /* mira hacia la derecha */
-  animation: ride 6s linear infinite;
-  z-index: 5;
-}
-
-/* Movimiento continuo sin giro ni empalme */
-@keyframes ride {
-  0% { left: -120px; }   /* inicia más fuera de la pantalla */
-  100% { left: 110%; }   /* termina completamente fuera de la vista */
-}
-
-/* Caballos adicionales: ajustados para evitar huecos y empalmes */
-.horse:nth-child(2) { animation-delay: 0.75s; }
-.horse:nth-child(3) { animation-delay: 1.5s; }
-.horse:nth-child(4) { animation-delay: 2.25s; }
-.horse:nth-child(5) { animation-delay: 3.0s; }
-.horse:nth-child(6) { animation-delay: 3.75s; }
-.horse:nth-child(7) { animation-delay: 4.5s; }
-.horse:nth-child(8) { animation-delay: 5.25s; }
-
+    /* 🐎 Caballos animados debajo del botón */
+    .horse {
+      position: absolute;
+      bottom: -8px;
+      left: -120px;
+      font-size: 50px;
+      transform: scaleX(-1);
+      animation: ride 6s linear infinite;
+      z-index: 5;
+    }
+    @keyframes ride {
+      0% { left: -120px; }
+      100% { left: 110%; }
+    }
+    .horse:nth-child(2) { animation-delay: 0.75s; }
+    .horse:nth-child(3) { animation-delay: 1.5s; }
+    .horse:nth-child(4) { animation-delay: 2.25s; }
+    .horse:nth-child(5) { animation-delay: 3.0s; }
+    .horse:nth-child(6) { animation-delay: 3.75s; }
+    .horse:nth-child(7) { animation-delay: 4.5s; }
+    .horse:nth-child(8) { animation-delay: 5.25s; }
 
     .body{padding:26px;display:none}
     .line{opacity:0;transform:translateY(6px);transition:opacity .6s ease,transform .6s ease}
@@ -106,6 +101,7 @@
       text-align:center;
       font-style:italic;
     }
+
     .kv{
       margin:10px auto;
       max-width:560px;
@@ -143,25 +139,22 @@
     }
     .toast.show{display:block}
 
-.foot {
-  padding: 24px 26px 10px;
-  border-top: 4px dashed #b88a45;
-  color: #4a2b0d;
-  font-size: 20px;              /* ← Aumenta el tamaño del texto */
-  font-weight: bold;            /* ← Le da más presencia */
-  text-align: center;
-  background: linear-gradient(to bottom, #f8eed1, #e6d1a3);
-  text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
-  letter-spacing: 1px;          /* ← Espaciado elegante */
-}
-
+    .foot {
+      padding: 24px 26px 10px;
+      border-top: 4px dashed #b88a45;
+      color: #4a2b0d;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      background: linear-gradient(to bottom, #f8eed1, #e6d1a3);
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+      letter-spacing: 1px;
+    }
 
     @keyframes fadeOut{from{opacity:1}to{opacity:0;visibility:hidden}}
     @keyframes fadeIn{from{opacity:0}to{opacity:1}}
     .hide{animation:fadeOut .8s forwards}
     .showbody{animation:fadeIn 1s forwards}
-
-    #verMapa:hover{color:#a0522d;text-shadow:0 0 5px #d6b57c;transition:.3s}
   </style>
 </head>
 <body>
@@ -170,33 +163,24 @@
       <section class="hero" id="hero">
         <div style="text-align:center">
           <h1>Invitación de cumpleaños</h1>
-          <p class="subtitle">Alfredo y Yos</p>
+          <p class="subtitle">Invitado</p>
           <div class="cta"><button id="btnStart" class="btn">Recibir invitación</button></div>
         </div>
 
-<!-- 🐎 Caballos animados debajo del botón -->
-<span class="horse">🐎</span>
-<span class="horse">🐎</span>
-<span class="horse">🐎</span>
-<span class="horse">🐎</span>
-<span class="horse">🐎</span>
-<span class="horse">🐎</span>
-<span class="horse">🐎</span>
-<span class="horse">🐎</span>
-
+        <!-- 🐎 Caballos animados debajo del botón -->
+        <span class="horse">🐎</span><span class="horse">🐎</span><span class="horse">🐎</span><span class="horse">🐎</span>
+        <span class="horse">🐎</span><span class="horse">🐎</span><span class="horse">🐎</span><span class="horse">🐎</span>
       </section>
 
       <section class="body" id="body">
         <div class="line" id="l1"><div class="kv"><strong>Erick</strong><div class="subtitle">te invita a festejar su cumpleaños</div></div></div>
         <div class="line" id="l2"><div class="kv"><strong>13 de diciembre</strong><div class="subtitle">¡Prepárate para perder la conciencia y pasarla fenomenal!</div></div></div>
-        
         <div class="line" id="l3">
           <div class="kv">
             <strong>📍 Sierra Hermosa, Arteaga, Coahuila.</strong>
             <div class="subtitle" id="verMapa" style="cursor:pointer;color:#8b4513;text-decoration:underline;">Ver ubicación 📍</div>
           </div>
         </div>
-
         <div class="line" id="l4">
           <div class="kv"><strong>Requisitos para asistir</strong>
           <div class="reqs">
@@ -207,7 +191,6 @@
             <div class="chip"><span class="ico">🎶</span><span>Y mucho ambiente</span></div>
           </div>
         </div>
-
         <div class="line" id="l5">
           <div class="rsvp">
             <button class="btn ok" id="bYes">Asistiré 🤠</button>
@@ -217,9 +200,7 @@
         </div>
       </section>
 
-      <div class="foot">
-        Invitación realizada por E2A Systems
-      </div>
+      <div class="foot">Invitación realizada por E2A Systems</div>
     </div>
   </div>
 
@@ -228,31 +209,52 @@
     const btnStart = document.getElementById('btnStart');
     const hero = document.getElementById('hero');
     const bodySec = document.getElementById('body');
+    const toast = document.getElementById('toast');
+    const phone = "528441043394";
 
+    // === Leer nombre desde URL ===
+    const params = new URLSearchParams(window.location.search);
+    const nombre = params.get('nombre')?.toLowerCase() || "invitado";
+    document.querySelector(".subtitle").innerText = nombre.charAt(0).toUpperCase() + nombre.slice(1);
+
+    // === Mensaje personalizado por invitado ===
+    let mensaje = "";
+    switch (nombre) {
+      case "sofy": mensaje = "Por supuesto que iré a tu cumpleaños amor 💖 eres el mejor, te amo 😘"; break;
+      case "imanol": case "cansino": mensaje = "Eres el mejor amigo del mundo 🌎 nos vemos en la peda 🤠"; break;
+      case "duran": case "primo": mensaje = "Gordo, ya sabes que sí iré a tu cumpleaños 🍻"; break;
+      case "emilia": mensaje = "Ya corta a Axel 😂💅"; break;
+      case "alfredo": case "yos": mensaje = "Esta vez prometo que Alfredo no vomitará 🤣💫 listos para la fiesta del año"; break;
+      case "dani": case "andrea": mensaje = "Dani no puede faltar 😎🔥 nos vemos allá!"; break;
+      case "jatziry": mensaje = "Esta vez sin mentarle la madre a nadie 😅"; break;
+      case "omar": mensaje = "Sí chaparro, allá estaré 🤠"; break;
+      case "cesar": mensaje = "Sí mi patoncito 💪 nos vemos en la fiesta"; break;
+      case "max": mensaje = "Sí gordo, esta vez voy con todo por Emilia 😏🔥"; break;
+      default: mensaje = "Claro que asistiré a tu cumpleaños 🎉 eres el mejor!"; break;
+    }
+
+    // === Animación del botón principal ===
     btnStart.addEventListener('click', () => {
       hero.classList.add('hide');
       setTimeout(() => {
         hero.style.display = 'none';
         bodySec.style.display = 'block';
         bodySec.classList.add('showbody');
-        const steps = ['l1','l2','l3','l4','l5'];
-        steps.forEach((id,i)=>setTimeout(()=>{document.getElementById(id).classList.add('show');},600+i*900));
+        ['l1','l2','l3','l4','l5'].forEach((id,i)=>
+          setTimeout(()=>document.getElementById(id).classList.add('show'),600+i*900)
+        );
       }, 800);
     });
 
-    const toast = document.getElementById('toast');
-    const phone = "528441043394"; // ← pon aquí tu número SIN + ni espacios (Ejemplo: 528441234567)
-    const nombreInvitado = "Alfredo y Yos"; // ← cambia aquí el nombre dinámicamente si lo deseas
-
+    // === WhatsApp ===
     document.getElementById('bYes').addEventListener('click', () => {
-const mensaje = `Esta vez prometo que Alfredo no vomitará 🤣💫 listos para la fiesta del año`;
-      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(mensaje)}`, '_blank');
+      const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
       mostrarToast();
     });
-
     document.getElementById('bNo').addEventListener('click', () => {
-      const mensaje = `Hola Erick, lamentablemente no podré asistir 😢. ¡Te deseo un excelente cumpleaños! 🎂`;
-      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(mensaje)}`, '_blank');
+      const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent("Hola Erick, lamentablemente no podré asistir 😢. ¡Te deseo un excelente cumpleaños! 🎂")}`;
+      window.open(url, '_blank');
       mostrarToast();
     });
 
@@ -261,11 +263,11 @@ const mensaje = `Esta vez prometo que Alfredo no vomitará 🤣💫 listos para 
       toast.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
-    const verMapa = document.getElementById('verMapa');
-    const mapsURL = "https://maps.app.goo.gl/fPW79SJcUrZLhfe57";
-    verMapa.addEventListener('click', () => window.open(mapsURL, "_blank"));
+    // === Mapa ===
+    document.getElementById('verMapa').addEventListener('click', () =>
+      window.open("https://maps.app.goo.gl/fPW79SJcUrZLhfe57", "_blank")
+    );
   });
-</script>
-
+  </script>
 </body>
 </html>
